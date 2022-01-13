@@ -53,29 +53,6 @@ If `newrelic.linkingmetadata` property is present in an event, it will be unroll
 PM> Install-Package Serilog.Sinks.NewRelic.Logs
 ```
 
-### JSON configuration
-
-It is possible to configure the sink using [Serilog.Settings.Configuration](https://github.com/serilog/serilog-settings-configuration) by specifying the license key and other desired parameters in `appsettings.json`:
-
-```
-{
-  "Serilog": {
-    "Using": [ "Serilog.Sinks.NewRelic.Logs" ],
-    "WriteTo": [
-      {
-        "Name": "NewRelicLogs",
-        "Args": {
-          "applicationName": "NewRelicLogTestSample",
-          "licenseKey": "58e9892abd3f09d91b0db0d0e9e95628FFFFNRAL"
-          //... other parameters
-        }
-      }
-    ],
-    "Enrich": [ "FromLogContext", "WithMachineName", "WithThreadId", "WithNewRelicLogsInContext" ]
-  }
-}
-```
-
 ## Contributors
 
 This code is based on https://github.com/stanisls/serilog-sinks-newreliclogs
@@ -92,7 +69,7 @@ Open a new Issue following our issue template [ISSUE_TEMPLATE](.github/ISSUE_TEM
 
 ## Changelog
 
-See in [nuget version history](https://www.nuget.org/packages/JsonMasking)
+See in [nuget version history](https://www.nuget.org/packages/Serilog.Sinks.NewRelic.Logs)
 
 ## Did you like it? Please, make a donate :)
 
